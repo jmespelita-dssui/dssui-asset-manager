@@ -5,6 +5,8 @@
 // Color system
 
 // scss-docs-start gray-color-variables
+$cherry: #990f02 !default;
+$primary-base: #990f02 !default;
 // $white:     #fff !default;
 // $gray-base: #3c4b64 !default;
 // $gray-100:  #ebedef !default;
@@ -76,7 +78,7 @@
 
 // fusv-disable
 // $primary-dark:  #1f1498 !default;
-// $primary-base:  #321fdb !default;
+// $primary-base:  black !default;
 // $primary-50:    #988fed !default;
 // $primary-25:    #ccc7f6 !default;
 
@@ -117,7 +119,7 @@
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-// $primary:       $primary-base !default;
+$primary:       $primary-base !default;
 // $secondary:     $secondary-base !default;
 // $success:       $success-base !default;
 // $info:          $info-base !default;
@@ -1640,7 +1642,7 @@
 // $sidebar-padding-y:                        0 !default;
 // $sidebar-padding-x:                        0 !default;
 // $sidebar-color:                            $high-emphasis-inverse !default;
-// $sidebar-bg:                               $gray-base !default;
+$sidebar-bg:                               $cherry !default;
 // $sidebar-border-width:                     0 !default;
 // $sidebar-border-color:                     transparent !default;
 // $sidebar-transition:                       margin-left .15s, margin-right .15s, box-shadow .075s, transform .15s, width .15s, z-index 0s ease .15s !default;
