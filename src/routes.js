@@ -4,6 +4,12 @@ const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 
+//Views
+// const EmployeeMgmt = React.lazy(() => import ('./views/emp-mgmt/EmployeeMgmt'))
+// const DevMgmt = React.lazy(() => import ('./views/dev-mgmt/DevMgmt'))
+
+const Test = React.lazy(() => import ('./views/tables/test/test'))
+
 // Base
 const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
 const Breadcrumbs = React.lazy(() => import('./views/base/breadcrumbs/Breadcrumbs'))
@@ -65,6 +71,18 @@ const Invoice = React.lazy(() => import('./views/apps/invoicing/Invoice'))
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
+  { path: '/test', name: 'Test', element: Test },
+  // { path: '/dashboard', name: 'Employee Management', component: EmployeeMgmt },
+  // { path: '/emp-mgmt', name: 'Employee Management', component: Test },
+  // { path: '/dev-mgmt', name: 'Device Management', component: DevMgmt },
+  // { path: '/employees', name: 'Employees', component: Employees },
+  // { path: '/sectors', name: 'Sectors', component: Sectors },
+  // { path: '/devices', name: 'Devices', component: Devices },
+  // { path: '/accessories', name: 'Accessories', component: Accessories },
+  // { path: '/ip-addresses', name: 'IP Addresses', component: IPAddresses },
+  // { path: '/dom-uids', name: 'Domain UIDs', component: DomUids },
+  // { path: '/offices', name: 'Offices', component: Offices },
+  // { path: '/email-addresses', name: 'Email Addresses', component: EmailAddresses },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
   { path: '/theme/typography', name: 'Typography', element: Typography },

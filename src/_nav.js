@@ -17,6 +17,7 @@ import {
   cilSpeedometer,
   cilSpreadsheet,
   cilStar,
+  cilPeople,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react-pro'
 
@@ -30,6 +31,12 @@ const _nav = [
       color: 'info-gradient',
       text: 'NEW',
     },
+  },
+  {
+    component: CNavItem,
+    name: 'Test',
+    to: '/test',
+    icon: <CIcon icon={cilPeople} customClassName="nav-icon" />,
   },
   {
     component: CNavTitle,
