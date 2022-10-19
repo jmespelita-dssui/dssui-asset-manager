@@ -2,8 +2,6 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import {
-  CButtonGroup,
-  CFormCheck,
   CContainer,
   CHeader,
   CHeaderBrand,
@@ -14,7 +12,7 @@ import {
   CNavItem,
 } from '@coreui/react-pro'
 import CIcon from '@coreui/icons-react'
-import { cilApplicationsSettings, cilMenu, cilMoon, cilSun } from '@coreui/icons'
+import { cilApplicationsSettings, cilMenu } from '@coreui/icons'
 
 import { AppBreadcrumb } from './index'
 
@@ -25,7 +23,7 @@ import {
   AppHeaderDropdownTasks,
 } from './header/index'
 
-import { logo } from 'src/assets/brand/logo'
+// import { logo } from 'src/assets/brand/logo'
 
 const AppHeader = () => {
   const dispatch = useDispatch()
@@ -48,7 +46,50 @@ const AppHeader = () => {
         >
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
-        <CHeaderBrand className="mx-auto d-md-none" to="/">
+        <CHeaderNav className="d-none d-md-flex me-auto">
+          <CNavItem>
+            <CNavLink to="/employees" component={NavLink} activeClassName="active">
+              Employees
+            </CNavLink>
+          </CNavItem>
+          <CNavItem>
+            <CNavLink to="/sectors" component={NavLink} activeClassName="active">
+              Sectors
+            </CNavLink>
+          </CNavItem>
+          <CNavItem>
+            <CNavLink to="/offices" component={NavLink} activeClassName="active">
+              Offices
+            </CNavLink>
+          </CNavItem>
+          <CNavItem>
+            <CNavLink to="/devices" component={NavLink} activeClassName="active">
+              Devices
+            </CNavLink>
+          </CNavItem>
+          <CNavItem>
+            <CNavLink to="/accessories" component={NavLink} activeClassName="active">
+              Accessories
+            </CNavLink>
+          </CNavItem>
+          <CNavItem>
+            <CNavLink to="/ip-addresses" component={NavLink} activeClassName="active">
+              IP Addresses
+            </CNavLink>
+          </CNavItem>
+          <CNavItem>
+            <CNavLink to="/dom-uids" component={NavLink} activeClassName="active">
+              Domain UIDs
+            </CNavLink>
+          </CNavItem>
+          {/* <CNavItem>
+            <CNavLink href="#">Users</CNavLink>
+          </CNavItem>
+          <CNavItem>
+            <CNavLink href="#">Settings</CNavLink>
+          </CNavItem> */}
+        </CHeaderNav>
+        {/* <CHeaderBrand className="mx-auto d-md-none" to="/">
           <CIcon icon={logo} height={48} alt="Logo" />
         </CHeaderBrand>
         <CHeaderNav className="d-none d-md-flex me-auto">
@@ -95,13 +136,13 @@ const AppHeader = () => {
         </CHeaderNav>
         <CHeaderNav className="ms-3 me-4">
           <AppHeaderDropdown />
-        </CHeaderNav>
-        <CHeaderToggler
+        </CHeaderNav> */}
+        {/* <CHeaderToggler
           className="px-md-0 me-md-3"
           onClick={() => dispatch({ type: 'set', asideShow: !asideShow })}
         >
           <CIcon icon={cilApplicationsSettings} size="lg" />
-        </CHeaderToggler>
+        </CHeaderToggler> */}
       </CContainer>
       <CHeaderDivider />
       <CContainer fluid>

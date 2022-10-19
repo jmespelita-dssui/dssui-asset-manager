@@ -30,8 +30,6 @@ import EditSector from './EditSector'
 import EditOffice from './EditOffice'
 
 const EmployeeMgmt = () => {
-  alert('hello!')
-  //complete
   const [employeeList, setEmployeeList] = useState([])
   const [employeeDetails, setEmployeeDetails] = useState([
     {

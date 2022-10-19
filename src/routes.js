@@ -5,10 +5,18 @@ const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 
 //Views
-// const EmployeeMgmt = React.lazy(() => import ('./views/emp-mgmt/EmployeeMgmt'))
-// const DevMgmt = React.lazy(() => import ('./views/dev-mgmt/DevMgmt'))
+const EmployeeMgmt = React.lazy(() => import ('./views/emp-mgmt/EmployeeMgmt'))
+const DevMgmt = React.lazy(() => import ('./views/dev-mgmt/DevMgmt'))
 
-const Test = React.lazy(() => import ('./views/tables/test/test'))
+//Tables
+const Employees = React.lazy(() => import ('./views/tables/employees/Employees'))
+const Sectors = React.lazy(() => import ('./views/tables/sectors/Sectors'))
+const Devices = React.lazy(() => import ('./views/tables/devices/Devices'))
+const Accessories = React.lazy(() => import ('./views/tables/accessories/Accessories'))
+const IPAddresses = React.lazy(() => import ('./views/tables/ip-addresses/IPAddresses'))
+const DomUids = React.lazy(() => import ('./views/tables/dom-uids/DomUids'))
+const Offices = React.lazy(() => import ('./views/tables/offices/Offices'))
+const EmailAddresses = React.lazy(() => import ('./views/tables/email-addresses/EmailAddresses'))
 
 // Base
 const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
@@ -71,18 +79,17 @@ const Invoice = React.lazy(() => import('./views/apps/invoicing/Invoice'))
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
-  { path: '/test', name: 'Test', element: Test },
   // { path: '/dashboard', name: 'Employee Management', component: EmployeeMgmt },
-  // { path: '/emp-mgmt', name: 'Employee Management', component: Test },
-  // { path: '/dev-mgmt', name: 'Device Management', component: DevMgmt },
-  // { path: '/employees', name: 'Employees', component: Employees },
-  // { path: '/sectors', name: 'Sectors', component: Sectors },
-  // { path: '/devices', name: 'Devices', component: Devices },
-  // { path: '/accessories', name: 'Accessories', component: Accessories },
-  // { path: '/ip-addresses', name: 'IP Addresses', component: IPAddresses },
-  // { path: '/dom-uids', name: 'Domain UIDs', component: DomUids },
-  // { path: '/offices', name: 'Offices', component: Offices },
-  // { path: '/email-addresses', name: 'Email Addresses', component: EmailAddresses },
+  { path: '/emp-mgmt', name: 'Employee Management', element: EmployeeMgmt },
+  { path: '/dev-mgmt', name: 'Device Management', element: DevMgmt },
+  { path: '/employees', name: 'Employees', element: Employees },
+  { path: '/sectors', name: 'Sectors', element: Sectors },
+  { path: '/devices', name: 'Devices', element: Devices },
+  { path: '/accessories', name: 'Accessories', element: Accessories },
+  { path: '/ip-addresses', name: 'IP Addresses', element: IPAddresses },
+  { path: '/dom-uids', name: 'Domain UIDs', element: DomUids },
+  { path: '/offices', name: 'Offices', element: Offices },
+  { path: '/email-addresses', name: 'Email Addresses', element: EmailAddresses },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
   { path: '/theme/typography', name: 'Typography', element: Typography },
