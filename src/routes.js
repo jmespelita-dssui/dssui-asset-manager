@@ -78,8 +78,8 @@ const Invoice = React.lazy(() => import('./views/apps/invoicing/Invoice'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
-  { path: '/dashboard', name: 'Dashboard', element: Dashboard },
-  // { path: '/dashboard', name: 'Employee Management', component: EmployeeMgmt },
+  // { path: '/dashboard', name: 'Dashboard', element: Dashboard },
+  { path: '/dashboard', name: 'Employee Management', component: EmployeeMgmt },
   { path: '/emp-mgmt', name: 'Employee Management', element: EmployeeMgmt },
   { path: '/dev-mgmt', name: 'Device Management', element: DevMgmt },
   { path: '/employees', name: 'Employees', element: Employees },
