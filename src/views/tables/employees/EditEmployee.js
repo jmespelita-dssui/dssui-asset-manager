@@ -35,7 +35,7 @@ const EditEmployee = ({ visible, onClose, formContent, onEdit, onDelete }) => {
     setIsEditedFirstName(false)
     setIsEditedStatus(false)
 
-    console.log('from Modal', newFormContent)
+    // console.log('from Modal', newFormContent)
     // const fullName = `${newFormContent.last_name} ${newFormContent.first_name}`
     onEdit(newFormContent)
   }
@@ -57,7 +57,7 @@ const EditEmployee = ({ visible, onClose, formContent, onEdit, onDelete }) => {
               onChange={(e) => {
                 setIsEditedLastName(true)
                 setLastName(e.target.value.trim())
-                console.log(e.target.value.trim())
+                // console.log(e.target.value.trim())
               }}
               required
             />
@@ -98,7 +98,7 @@ const EditEmployee = ({ visible, onClose, formContent, onEdit, onDelete }) => {
               Cancel
             </CButton>
             <CButton color="primary" onClick={() => onDelete(formContent.emp_id)}>
-              Delete user
+              Delete device
             </CButton>
             <CButton color="primary" type="submit">
               Save changes

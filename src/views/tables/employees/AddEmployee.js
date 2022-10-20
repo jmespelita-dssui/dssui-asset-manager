@@ -19,7 +19,7 @@ const AddEmployee = ({ onAdd, employeeList, onError }) => {
       return
     }
 
-    console.log('addEmployee', lastName, firstName, status)
+    // console.log('addEmployee', lastName, firstName, status)
     onAdd({ lastName, firstName, status })
 
     e.target.reset()
@@ -42,7 +42,7 @@ const AddEmployee = ({ onAdd, employeeList, onError }) => {
             maxLength={45}
             placeholder="Last name"
             onChange={(e) => {
-              console.log(e.target.value.trim())
+              // console.log(e.target.value.trim())
               setLastName(e.target.value.trim())
             }}
             required
@@ -55,7 +55,7 @@ const AddEmployee = ({ onAdd, employeeList, onError }) => {
             name="firstName"
             placeholder="First name"
             onChange={(e) => {
-              console.log(e.target.value.trim())
+              // console.log(e.target.value.trim())
               setFirstName(e.target.value.trim())
             }}
             maxLength={45}
@@ -66,7 +66,7 @@ const AddEmployee = ({ onAdd, employeeList, onError }) => {
           <CFormSelect
             className="form-select"
             onChange={(e) => {
-              console.log(e.target.value.trim())
+              // console.log(e.target.value.trim())
               setStatus(e.target.value)
             }}
             required

@@ -55,7 +55,7 @@ const Devices = () => {
   }
 
   const addDevice = (device) => {
-    console.log('adding device:', device)
+    // console.log('adding device:', device)
 
     axios
       .post(`${config.api}/api/add-device`, {
@@ -84,7 +84,7 @@ const Devices = () => {
 
   const editDevice = (device) => {
     // e.preventDefault()
-    console.log('editDevice', formContent, device)
+    // console.log('editDevice', formContent, device)
     if (
       formContent.dev_type === device.dev_type &&
       formContent.pc_name === device.pc_name &&

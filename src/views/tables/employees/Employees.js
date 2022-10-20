@@ -46,7 +46,7 @@ const Employees = () => {
   }
 
   const addEmployee = (employee) => {
-    console.log('addEmployee: ', employee)
+    // console.log('addEmployee: ', employee)
 
     axios
       .post(`${config.api}/api/add-employee`, {
@@ -97,7 +97,7 @@ const Employees = () => {
     }
 
     setVisibleEmployee(false)
-    console.log(employee)
+    // console.log(employee)
   }
 
   const deleteEmployee = (id) => {
