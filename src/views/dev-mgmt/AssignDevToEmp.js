@@ -49,7 +49,7 @@ const AssignDevToEmp = ({ onAdd, employeeList, deviceList }) => {
             className="form-select"
             onChange={(e) => {
               setDevice(e.target.value)
-              console.log('selected dev_ID: ' + e.target.value)
+              // console.log('selected dev_ID: ' + e.target.value)
             }}
             defaultValue=""
             required

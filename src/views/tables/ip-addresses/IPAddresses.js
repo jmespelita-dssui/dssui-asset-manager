@@ -31,7 +31,7 @@ const IPAddresses = () => {
   ]
 
   const fetchData = async () => {
-    console.log('fetching data...')
+    // console.log('fetching data...')
     axios.get(`${config.api}/api/ip-addresses`).then((response) => {
       setIPAddressList(response.data)
     })
@@ -143,7 +143,7 @@ const IPAddresses = () => {
                     shape="square"
                     size="sm"
                     onClick={() => {
-                      console.log(item)
+                      // console.log(item)
                       setFormContent(item)
                       setIPAddress(item)
                       setVisibleIPAddress(true)

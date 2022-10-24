@@ -29,7 +29,7 @@ const AssignPC = ({ visible, onAdd, deviceList, onClose }) => {
                 className="form-select"
                 onChange={(e) => {
                   setDevice(e.target.value)
-                  console.log('selected dev_ID: ' + e.target.value)
+                  // console.log('selected dev_ID: ' + e.target.value)
                 }}
                 defaultValue=""
                 required

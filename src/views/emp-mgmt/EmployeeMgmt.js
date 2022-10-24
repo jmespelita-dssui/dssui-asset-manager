@@ -95,7 +95,7 @@ const EmployeeMgmt = () => {
   }
 
   const refreshTable = async () => {
-    console.log('fetching data...')
+    // console.log('fetching data...')
     axios
       .get(`${config.api}/api/employees`)
       .then((response) => {
@@ -172,7 +172,7 @@ const EmployeeMgmt = () => {
       setFormContent(e)
       setVisibleEditSector(true)
     } else if (e.edit === 'office') {
-      console.log('FORM CONTENT', e)
+      // console.log('FORM CONTENT', e)
       setFormContent(e)
       setVisibleEditOffice(true)
     }
@@ -268,7 +268,7 @@ const EmployeeMgmt = () => {
       offID: e.off_id,
     }
     if (formContent.off_id === null && e.off_id !== null) {
-      console.log('add office', empOff)
+      // console.log('add office', empOff)
       axios
         .post(`${config.api}/api/add-emp-off`, empOff)
         .then(() => {
@@ -288,7 +288,7 @@ const EmployeeMgmt = () => {
           return
         })
     } else if (e.off_id === '') {
-      console.log('delete emp_off', e.emp_off_id)
+      // console.log('delete emp_off', e.emp_off_id)
       axios
         .delete(`${config.api}/api/delete-emp-off/${e.emp_off_id}`)
         .then(() => {
@@ -305,7 +305,7 @@ const EmployeeMgmt = () => {
           return
         })
     } else {
-      console.log('edit office', empOff)
+      // console.log('edit office', empOff)
       axios
         .put(`${config.api}/api/edit-emp-off`, empOff)
         .then(() => {
@@ -328,7 +328,7 @@ const EmployeeMgmt = () => {
   }
 
   const unassignInfo = () => {
-    console.log(request.emp_sect_id, request.type)
+    // console.log(request.emp_sect_id, request.type)
     if (request.type === 'sector') {
       axios
         .delete(`${config.api}/api/delete-emp-sect/${request.emp_sect_id}`)

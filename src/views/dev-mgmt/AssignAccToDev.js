@@ -20,13 +20,13 @@ const AssignAccToDev = ({ onAdd, onError, deviceList }) => {
   }
 
   const changeSelectOptionHandler = (e) => {
-    console.log('chosen category: ' + e)
+    // console.log('chosen category: ' + e)
     // let filteredList = []
 
     axios
       .get(`http://localhost:3001/api/dev-acc-id/${e}`)
       .then((response) => {
-        console.log(response.data)
+        // console.log(response.data)
         let content = response.data.map((i) => (
           <option key={i.acc_id}>
             {i.acc_id} {i.model}
@@ -58,7 +58,7 @@ const AssignAccToDev = ({ onAdd, onError, deviceList }) => {
             // onLoad={clearForm}
             onChange={(e) => {
               setDevice(e.target.value)
-              console.log('selected dev ID: ' + e.target.value)
+              // console.log('selected dev ID: ' + e.target.value)
             }}
             defaultValue=""
             required
@@ -98,7 +98,7 @@ const AssignAccToDev = ({ onAdd, onError, deviceList }) => {
             className="form-select"
             onClick={(e) => {
               setAcc(e.target.value)
-              console.log('selected accessory: ' + e.target.value)
+              // console.log('selected accessory: ' + e.target.value)
             }}
             defaultValue=""
             required

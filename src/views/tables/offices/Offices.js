@@ -37,7 +37,7 @@ const Offices = () => {
   ]
 
   const fetchData = async () => {
-    console.log('fetching data...')
+    // console.log('fetching data...')
     axios.get(`${config.api}/api/offices`).then((response) => {
       setOfficeList(response.data)
     })

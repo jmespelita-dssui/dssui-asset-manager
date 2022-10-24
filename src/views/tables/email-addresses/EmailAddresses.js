@@ -44,7 +44,7 @@ const EmailAddresses = () => {
   ]
 
   const fetchData = async () => {
-    console.log('fetching data...')
+    // console.log('fetching data...')
     axios.get(`${config.api}/api/email-addresses`).then((response) => {
       setEmailAddressList(response.data)
     })

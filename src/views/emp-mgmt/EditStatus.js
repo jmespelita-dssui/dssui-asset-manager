@@ -43,7 +43,7 @@ const EditStatus = ({ visible, onClose, onSave, formContent }) => {
               <CFormSelect
                 id="validationDefault04"
                 onChange={(e) => {
-                  console.log('ON CHANGE', e)
+                  // console.log('ON CHANGE', e)
                   setStatus(e.target.value.trim())
                 }}
                 defaultValue={formContent.status}

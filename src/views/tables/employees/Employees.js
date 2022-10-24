@@ -39,7 +39,7 @@ const Employees = () => {
   ]
 
   const fetchData = async () => {
-    console.log('fetching data...')
+    // console.log('fetching data...')
     axios.get(`${config.api}/api/employees`).then((response) => {
       setEmployeeList(response.data)
     })

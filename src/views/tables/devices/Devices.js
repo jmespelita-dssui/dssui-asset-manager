@@ -48,7 +48,7 @@ const Devices = () => {
   ]
 
   const fetchData = async () => {
-    console.log('fetching data...')
+    // console.log('fetching data...')
     axios.get(`${config.api}/api/devices`).then((response) => {
       setDeviceList(response.data)
     })

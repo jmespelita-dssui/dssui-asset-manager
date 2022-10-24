@@ -40,15 +40,13 @@ const Accessories = () => {
   ]
 
   const fetchData = async () => {
-    console.log('fetching data...')
+    // console.log('fetching data...')
     axios.get(`${config.api}/api/accessories`).then((response) => {
       setAccessoryList(response.data)
     })
   }
 
   const addAccessory = (accessory) => {
-    console.log('adding accessory:')
-    console.log(accessory)
 
     let requests = []
     for (let i = 0; i < parseInt(accessory.quantity); i++) {

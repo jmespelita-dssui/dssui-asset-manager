@@ -43,16 +43,13 @@ const Sectors = () => {
   ]
 
   const fetchData = async () => {
-    console.log('fetching data...')
+    // console.log('fetching data...')
     axios.get(`${config.api}/api/sectors`).then((response) => {
       setSectorList(response.data)
     })
   }
 
   const addSector = (sector) => {
-    console.log('adding sector:')
-    console.log(sector)
-
     axios
       .post(`${config.api}/api/add-sector`, {
         sect_name: sector.sectName,
@@ -103,11 +100,9 @@ const Sectors = () => {
     }
 
     setVisibleSector(false)
-    console.log(sector)
   }
 
   const deleteSector = (id) => {
-    console.log('deleting sector', id)
     axios
       .delete(`${config.api}/api/delete-sector/${id}`)
       .then(() => {

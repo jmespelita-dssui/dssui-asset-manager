@@ -61,10 +61,10 @@ const EditSector = ({ visible, onClose, onUnassign, onSave, formContent }) => {
                 date={Moment(formContent.date_assigned_sect).format('MM/DD/YYYY')}
                 onDateChange={(e) => {
                   setIsChangedStartDate(true)
-                  console.log('start date change', e)
+                  // console.log('start date change', e)
                   if (e !== null) {
                     setStartDate(Moment(e).format('YYYY-MM-DD'))
-                    console.log('OUTPUT DATE', e)
+                    // console.log('OUTPUT DATE', e)
                   } else {
                     setStartDate(null)
                   }
@@ -88,7 +88,7 @@ const EditSector = ({ visible, onClose, onUnassign, onSave, formContent }) => {
                 // }}
                 onDateChange={(e) => {
                   setIsChangedEndDate(true)
-                  console.log('end date change', e)
+                  // console.log('end date change', e)
                   if (e !== null) {
                     setEndDate(Moment(e).format('YYYY-MM-DD'))
                   } else {
