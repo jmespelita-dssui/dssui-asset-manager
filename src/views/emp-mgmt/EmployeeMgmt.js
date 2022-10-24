@@ -83,7 +83,7 @@ const EmployeeMgmt = () => {
     axios
       .get(`${config.api}/api/emp-details/${empID}`)
       .then((response) => {
-        console.log('employee details', response.data)
+        // console.log('employee details', response.data)
         setEmployeeDetails(response.data)
       })
       .catch((error) => {
